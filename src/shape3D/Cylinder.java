@@ -10,5 +10,6 @@ public class Cylinder extends RightPrism {
 	public double getBaseArea() {
 		return Math.PI*radius*radius;
 	}
+	public double getRadius() {return radius;}
 
 }

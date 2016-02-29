@@ -9,5 +9,7 @@ public class RectPrism extends RightPrism implements Shape3D {
 	public double getBaseArea() {
 		return length*width;
 	}
+	public double getLength() {return length;}
+	public double getWidth() {return width;}
 
 }
