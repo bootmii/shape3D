@@ -1,8 +1,9 @@
 package shape3D;
 
 public abstract class RightPrism {
-	public abstract double getVolume();
+	private double height;
+	public double getVolume() {return height*this.getBaseArea();}
 	public abstract double getSurfaceArea();
-	public abstract double getHeight();
+	public double getHeight() {return height;}
 	public abstract double getBaseArea();
 }
