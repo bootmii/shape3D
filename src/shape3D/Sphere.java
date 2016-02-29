@@ -9,4 +9,5 @@ public class Sphere implements Shape3D {
 	public double getSurfaceArea() {
 		return 4*Math.PI*radius*radius;
 	}
+	public Sphere(double radius) {this.radius = radius;}
 }
