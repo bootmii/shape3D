@@ -8,6 +8,8 @@ public class TriPrism extends RightPrism implements Shape3D {
 	public TriPrism(double h, double a, double b, double c) {
 		if(h<=0||a<=0||b<=0||c<=0)
 			throw new IllegalStateException("Edge lengths must be positive");
+		if(a>=b+c||b>=a+c||c>=a+b)
+			throw new IllegalStateException("Base is not a triangle");
 		height = h;
 		baseSideA = a;
 		baseSideB = b;
