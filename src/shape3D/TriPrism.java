@@ -1,5 +1,10 @@
 package shape3D;
 
+import java.util.Arrays;
+import java.util.Collections;
+
+import javax.swing.event.ListSelectionEvent;
+
 public class TriPrism extends RightPrism implements Shape3D {
 	private double height;
 	private double baseSideA;
@@ -25,7 +30,8 @@ public class TriPrism extends RightPrism implements Shape3D {
 	@Override
 	public double getBaseArea() {
 		// TODO Auto-generated method stub
+		double[] sides = {baseSideA, baseSideB, baseSideC};
+		;
 		return 0;
 	}
-
 }
