@@ -1,10 +1,5 @@
 package shape3D;
 
-import java.util.Arrays;
-import java.util.Collections;
-
-import javax.swing.event.ListSelectionEvent;
-
 public class TriPrism extends RightPrism implements Shape3D {
 	private double height;
 	private double baseSideA;
@@ -22,16 +17,16 @@ public class TriPrism extends RightPrism implements Shape3D {
 	}
 	@Override
 	public double getSurfaceArea() {
-		// TODO Auto-generated method stub
-		// return h*a + h*b + h*c + 2*getBaseArea();
-		return 0;
+		return height*(baseSideA+baseSideB+baseSideC) + 2*getBaseArea();
 	}
 
 	@Override
 	public double getBaseArea() {
-		// TODO Auto-generated method stub
-		double[] sides = {baseSideA, baseSideB, baseSideC};
-		;
-		return 0;
+		/**
+		 * Returns the area of the triangle base using Heron's formula.
+		 * WARNING: Returns unexpected results if base has a small angle.
+		 */
+		double s = (baseSideA+baseSideB+baseSideC)/2;	
+		return Math.sqrt(s*(s-baseSideA)*(s-baseSideB)*(s-baseSideC));
 	}
 }
